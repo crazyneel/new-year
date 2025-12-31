@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our New Year Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="canvas-container"></div> <!-- For fireworks/stars background -->
+
+    <!-- Start Screen (For Audio Autoplay Policy) -->
+    <div id="start-screen" class="start-screen">
+        <div class="start-content">
+            <h1 class="glow-text title">Our New Year Story</h1>
+            <p class="subtitle" style="font-size: 1.2rem; margin-top: 10px;">Put on your headphones 🎧</p>
+            <button id="start-btn" class="glow-button" style="margin-top: 30px;">Begin Journey ✨</button>
+        </div>
+    </div>
+
+    <!-- PAGE 1: Opening Memory -->
+    <section id="page1" class="section hero-section">
+        <div class="content-wrapper">
+            <div class="photo-frame glow-frame" onclick="nextPage()">
+                <img src="img1.png" alt="Opening Memory" class="photo" id="photo1">
+                <div class="click-hint">
+                    <svg class="hint-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    </svg>
+                </div>
+                <div class="hint-text">Tap to Continue</div>
+            </div>
+            <h1 class="glow-text title">Happy New Year ✨</h1>
+            <p class="subtitle cursive">A new year begins… with you in my thoughts</p>
+        </div>
+    </section>
+
+    <!-- PAGE 2: Smile Memory -->
+    <section id="page2" class="section smile-section">
+        <div class="content-wrapper">
+            <div class="photo-frame parallax-frame" onclick="nextPage()">
+                <img src="img2.png" alt="Smile Memory" class="photo" id="photo2">
+                <div class="click-hint">
+                    <svg class="hint-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    </svg>
+                </div>
+                <div class="hint-text">Tap to Continue</div>
+            </div>
+            <div class="text-container">
+                <p class="fade-line">Kuch muskurahatein bas chehre tak nahi hoti…</p>
+                <p class="fade-line delay-1">Kuch seedha dil tak pahunch jaati hain.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: Shayari Chapter -->
+    <section id="page3" class="section shayari-section">
+        <div class="glass-card">
+            <div class="photo-frame circle-frame" onclick="nextPage()">
+                <img src="img3.png" alt="Shayari Memory" class="photo" id="photo3">
+                <div class="click-hint">
+                    <svg class="hint-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    </svg>
+                </div>
+                <div class="hint-text">Tap to Continue</div>
+            </div>
+            <p class="shayari-text handwritten">
+                Naya saal nayi umeedein laaya hai,<br>
+                Par meri har umeed ka naam wahi hai,<br>
+                Jo khamoshi me bhi sukoon de,<br>
+                Aur bheed me bhi apna sa lage.
+            </p>
+        </div>
+        <div class="particles"></div>
+    </section>
+
+    <!-- PAGE 4: Quiet Moment -->
+    <section id="page4" class="section quiet-section">
+        <div class="star-bg"></div>
+        <div class="content-wrapper">
+            <div class="photo-frame cinematic-frame" onclick="nextPage()">
+                <img src="img4.png" alt="Quiet Moment" class="photo" id="photo4">
+                <div class="click-hint">
+                    <svg class="hint-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    </svg>
+                </div>
+                <div class="hint-text">Tap to Continue</div>
+            </div>
+            <p class="minimal-text">Kuch log bina kuch kahe bhi… bahut kuch keh jaate hain.</p>
+        </div>
+    </section>
+
+    <!-- PAGE 5: Celebration Page -->
+    <section id="page5" class="section celebration-section">
+        <div class="content-wrapper">
+            <div class="photo-frame gold-glow-frame" onclick="nextPage()">
+                <img src="img5.png" alt="Celebration" class="photo" id="photo5">
+                <div class="click-hint">
+                    <svg class="hint-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    </svg>
+                </div>
+                <div class="hint-text">Tap to Continue</div>
+            </div>
+            <p class="emotional-message">
+                Iss naye saal me bas itna chahta hoon…<br>
+                Har khushi tere naam ho,<br>
+                Aur jo bhi naya shuru ho,<br>
+                Uski sabse khoobsurat wajah tu ho.
+            </p>
+            <button id="welcome-btn" class="glow-button" onclick="nextPage()">Welcome New Year 🌟</button>
+        </div>
+    </section>
+
+    <!-- PAGE 6: Ending Scene -->
+    <section id="page6" class="section ending-section">
+        <div class="content-wrapper">
+            <div class="photo-frame blur-frame">
+                <img src="img6.png" alt="Ending" class="photo" id="photo6">
+            </div>
+            <p class="final-text">May this year be gentle, beautiful, and full of smiles ✨</p>
+        </div>
+    </section>
+
+    <audio id="bg-music" loop>
+        <source
+            src="tum.mp3"
+            type="audio/mpeg">
+        <!-- Fallback or placeholder music -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
